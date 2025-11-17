@@ -25,10 +25,16 @@ body {
     background: var(--bg2);
 }
 
+h1,
+h2 {
+    margin: 0;
+}
+
 .slide {
     margin: var(--slide-margin);
     height: calc(100dvh - (2 * var(--slide-margin)));
     border-radius: 1rem;
+    padding: 1rem;
 }
 
 .bg1 {
@@ -43,6 +49,12 @@ body {
     border: 1px solid rgb(44, 44, 44);
 }
 
+#hero {
+    display: flex;
+    justify-content: space-between;
+    --common-padding: 3rem;
+}
+
 #hero h1 {
     display: flex;
     flex-direction: column;
@@ -51,5 +63,58 @@ body {
 
 #hero h1 span:last-child {
     font-size: 1.3rem;
-    text-align: right;
+}
+
+#hero #left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: var(--common-padding) 0;
+}
+
+#hero #profile-pic {
+    background: #fff;
+    border-radius: 40rem;
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    width: 15rem;
+}
+
+#hero #left h2 {
+    max-width: min-content;
+}
+
+.img-responsive {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero #left img {
+    border-radius: 40rem;
+    transform: scale(0.96);
+}
+
+#hero #right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--common-padding) 0;
+}
+
+#hero #right>div {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero #right>div img {
+    height: 100%;
+    width: 100%;
 }
